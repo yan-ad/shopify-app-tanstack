@@ -12,34 +12,7 @@ It is not an official Shopify package.
 
 This package is built for the Vite ecosystem, making it easy to build Shopify apps with TanStack Router while keeping familiar Shopify app primitives.
 
-## npm package
-
-- npm: https://www.npmjs.com/package/@yanuaraditia/shopify-app-tanstack
-- Install with bun: bun add @yanuaraditia/shopify-app-tanstack @tanstack/react-router
-- Install with npm: npm install @yanuaraditia/shopify-app-tanstack @tanstack/react-router
-
-## Getting started
-
-Clone this repository and run:
-
-```sh
-bun install
-bun run build
-```
-
-Then follow the API docs in this repository and adapt your app's entrypoints to TanStack Router.
-
-## Changelog and releases
-
-This repository uses changelogen to generate and maintain CHANGELOG.md from Conventional Commits.
-
-Common commands:
-
-- bun run changelog (update CHANGELOG.md from commits)
-- bun run changelog:bump (bump version and update CHANGELOG.md)
-- bun run release (build, bump, changelog, commit, and tag)
-
-## Migrating from React Router
+## Migration guide: `@shopify/shopify-app-react-router` -> `@yanuaraditia/shopify-app-tanstack`
 
 If your app currently uses `@shopify/shopify-app-react-router`, use this checklist to migrate directly to `@yanuaraditia/shopify-app-tanstack`.
 
@@ -249,6 +222,20 @@ If your app fails after migration, start by checking:
 - Any remaining imports from `@shopify/shopify-app-react-router`
 - Missing TanStack Router route registration
 - Routes that use `authenticate.admin(request)` but do not pass `apiKey` to `AppProvider`
+
+## Package and release info
+
+- npm: https://www.npmjs.com/package/@yanuaraditia/shopify-app-tanstack
+- Install with bun: bun add @yanuaraditia/shopify-app-tanstack @tanstack/react-router
+- Install with npm: npm install @yanuaraditia/shopify-app-tanstack @tanstack/react-router
+
+This repository uses changelogen to generate and maintain `CHANGELOG.md` from Conventional Commits.
+
+Common commands:
+
+- bun run changelog (update `CHANGELOG.md` from commits)
+- bun run changelog:bump (bump version and update `CHANGELOG.md`)
+- bun run release (build, bump, changelog, commit, and tag)
 
 ## Resources
 
