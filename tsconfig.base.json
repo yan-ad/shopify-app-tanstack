@@ -1,5 +1,4 @@
 {
-  "extends": "@shopify/typescript-configs/library.json",
   "compileOnSave": false,
   "compilerOptions": {
     "composite": true,
@@ -19,12 +18,7 @@
     "strictFunctionTypes": false,
     "useUnknownInCatchVariables": false,
     "jsx": "react-jsx",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext.asynciterable",
-      "ES2021",
-    ],
+    "lib": ["dom", "dom.iterable", "esnext.asynciterable", "ES2021"],
     "types": ["@cloudflare/workers-types", "node", "vitest/globals"],
     "baseUrl": ".",
     "outDir": "./dist/ts",
