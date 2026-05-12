@@ -13,8 +13,6 @@ export default defineConfig({
         inline: ['@shopify/react-testing', 'react-reconciler'],
       },
     },
-    setupFiles: [
-      './src/__tests__/setup-vitest.ts',
-    ],
+    setupFiles: ['./src/__tests__/setup-vitest.ts'],
   },
 });

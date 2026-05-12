@@ -17,6 +17,7 @@
     "strictPropertyInitialization": false,
     "strictFunctionTypes": false,
     "useUnknownInCatchVariables": false,
+    "skipLibCheck": true,
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext.asynciterable", "ES2021"],
     "types": ["@cloudflare/workers-types", "node", "vitest/globals"],

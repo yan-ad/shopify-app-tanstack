@@ -37,7 +37,7 @@ export function testConfig<
     ...overrides,
     logger: {
       ...TEST_CONFIG.logger,
-      ...(overrides as NonNullable<Overrides>).logger,
+      ...(overrides as unknown as NonNullable<Overrides>).logger,
     },
     future,
   } as any;

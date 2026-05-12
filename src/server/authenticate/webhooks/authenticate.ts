@@ -37,7 +37,7 @@ export function authenticateWebhookFactory<Topics extends string>(
       rawRequest: request,
     });
 
-    if (!check.valid) {
+    if (check.valid === false) {
       if (check.reason === WebhookValidationErrorReason.InvalidHmac) {
         logger.debug('Webhook HMAC validation failed', check);
         throw new Response(undefined, {

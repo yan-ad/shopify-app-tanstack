@@ -27,7 +27,7 @@ export function authenticateFlowFactory(params: BasicParams): AuthenticateFlow {
       rawRequest: request,
     });
 
-    if (!result.valid) {
+    if (result.valid === false) {
       logger.error('Received an invalid flow request', {reason: result.reason});
 
       throw new Response(undefined, {

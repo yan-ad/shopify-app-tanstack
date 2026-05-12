@@ -36,7 +36,7 @@ export function authenticateFulfillmentServiceFactory(
       rawRequest: request,
     });
 
-    if (!result.valid) {
+    if (result.valid === false) {
       logger.error('Received an invalid fulfillment service request', {
         reason: result.reason,
       });
