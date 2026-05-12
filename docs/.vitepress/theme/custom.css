@@ -1,0 +1,30 @@
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    135deg,
+    #89b4fa 10%,
+    #cba6f7 45%,
+    #94e2d5 90%
+  );
+  --vp-home-hero-image-background-image: radial-gradient(
+    circle at 30% 30%,
+    rgba(203, 166, 247, 0.35),
+    rgba(137, 180, 250, 0.2) 45%,
+    transparent 70%
+  );
+  --vp-home-hero-image-filter: blur(48px);
+}
+
+.VPFeature {
+  border: 1px solid
+    color-mix(in oklab, var(--vp-c-divider) 82%, var(--vp-c-brand-1) 18%);
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--vp-c-bg-soft) 94%, var(--vp-c-brand-1) 6%),
+    var(--vp-c-bg-soft)
+  );
+}
+
+.VPHero .text {
+  max-width: 44rem;
+}

@@ -5,6 +5,12 @@ export default defineConfig({
   description: 'Documentation for Shopify App TanStack package',
   cleanUrls: true,
   ignoreDeadLinks: true,
+  markdown: {
+    theme: {
+      light: 'catppuccin-latte',
+      dark: 'catppuccin-mocha',
+    },
+  },
   themeConfig: {
     nav: [
       {text: 'Guide', link: '/guide/overview'},
