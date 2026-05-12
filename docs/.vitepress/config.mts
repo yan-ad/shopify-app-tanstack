@@ -1,7 +1,7 @@
 import {defineConfig} from 'vitepress';
 
 export default defineConfig({
-  title: '@yanuaraditia/shopify-app-tanstack',
+  title: 'Shopify Tanstack',
   description: 'Documentation for Shopify App TanStack package',
   cleanUrls: true,
   ignoreDeadLinks: true,
