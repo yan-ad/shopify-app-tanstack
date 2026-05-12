@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 This changelog is managed with changelogen and is updated by running the changelog workflow.
 
+## v1.4.0
+
+[compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.3.6...v1.4.0)
+
+### 🚀 Enhancements
+
+- Rename the package to orgs ([4063857](https://github.com/yanuaraditia/shopify-app-tanstack/commit/4063857))
+
+### 🏡 Chore
+
+- **release:** Bump version to 1.3.6 and update changelog ([2573c6d](https://github.com/yanuaraditia/shopify-app-tanstack/commit/2573c6d))
+
+### ❤️ Contributors
+
+- Yanuar Aditia ([@ngalor](https://github.com/ngalor))
+
 ## v1.3.6
 
 [compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.3.5...v1.3.6)
