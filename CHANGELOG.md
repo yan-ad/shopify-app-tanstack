@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 This changelog is managed with changelogen and is updated by running the changelog workflow.
 
+## v1.3.6
+
+[compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.3.5...v1.3.6)
+
+### 🩹 Fixes
+
+- **publish:** Remove provenance flag from npm publish command ([1fa9149](https://github.com/yanuaraditia/shopify-app-tanstack/commit/1fa9149))
+
+### 🏡 Chore
+
+- **release:** Bump version to 1.3.5 and update changelog ([a338195](https://github.com/yanuaraditia/shopify-app-tanstack/commit/a338195))
+
+### ❤️ Contributors
+
+- Yanuar Aditia ([@ngalor](https://github.com/ngalor))
+
 ## v1.3.5
 
 [compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.3.4...v1.3.5)
