@@ -3,6 +3,20 @@ import {useNavigate} from '@tanstack/react-router';
 
 interface BaseProps {
   children: React.ReactNode;
+  /**
+   * Optional slot to render router devtools (for example, `<TanStackRouterDevtools />`).
+   *
+   * This lets apps mount devtools in one place without this package depending on
+   * a specific devtools package.
+   */
+  routerDevtools?: React.ReactNode;
+  /**
+   * Controls whether `routerDevtools` should be rendered.
+   *
+   * Defaults to `true` so you can keep the element wired up and disable it
+   * conditionally (for example, in production).
+   */
+  enableRouterDevtools?: boolean;
 }
 
 interface EmbeddedProps extends BaseProps {
@@ -98,11 +112,15 @@ export type AppProviderProps = NonEmbeddedProps | EmbeddedProps;
  * ```
  */
 export function AppProvider(props: AppProviderProps) {
+  const shouldRenderRouterDevtools =
+    props.enableRouterDevtools !== false && props.routerDevtools;
+
   return (
     <>
       {props.embedded && <AppBridge apiKey={props.apiKey} />}
       <script src="https://cdn.shopify.com/shopifycloud/polaris.js" />
       {props.children}
+      {shouldRenderRouterDevtools}
     </>
   );
 }
