@@ -1,9 +1,9 @@
 {
   "description": "Shopify TanStack Router - to simplify building Shopify apps with TanStack Router",
   "name": "@yanuaraditia/shopify-app-tanstack",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.0.0"
   },
   "repository": {
     "type": "git",
@@ -103,7 +103,7 @@
     "@shopify/shopify-app-session-storage": "^5.0.0",
     "@shopify/storefront-api-client": "^1.0.10",
     "compare-versions": "^6.1.1",
-    "isbot": "^5.1.36"
+    "isbot": "^5.1.40"
   },
   "peerDependencies": {
     "react": ">=18",
