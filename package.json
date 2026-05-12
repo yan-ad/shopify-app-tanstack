@@ -112,13 +112,6 @@
     "@tanstack/react-router": "^1.169.2"
   },
   "files": [
-    "dist/*",
-    "src",
-    "!src/**/__tests__",
-    "!src/**/*.test.ts",
-    "!src/**/*.test.tsx",
-    "!build/**/__tests__",
-    "!tsconfig.tsbuildinfo",
-    "!node_modules"
+    "dist"
   ]
 }
