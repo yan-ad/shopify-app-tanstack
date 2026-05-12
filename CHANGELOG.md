@@ -4,6 +4,31 @@ All notable changes to this project will be documented in this file.
 
 This changelog is managed with changelogen and is updated by running the changelog workflow.
 
+## v1.3.0
+
+[compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.2.0...v1.3.0)
+
+### 🚀 Enhancements
+
+- Fixing ([4f528b8](https://github.com/yanuaraditia/shopify-app-tanstack/commit/4f528b8))
+- Utilize oxc and rolldown, and remove cjs support ([df02e5e](https://github.com/yanuaraditia/shopify-app-tanstack/commit/df02e5e))
+
+### 🩹 Fixes
+
+- **test:** Exclude test from tsconfig ([46654d6](https://github.com/yanuaraditia/shopify-app-tanstack/commit/46654d6))
+
+### 💅 Refactors
+
+- Remove ESLint configuration and migrate to Oxlint ([2d5e98b](https://github.com/yanuaraditia/shopify-app-tanstack/commit/2d5e98b))
+
+### 🤖 CI
+
+- **release:** Release by actions ([b490599](https://github.com/yanuaraditia/shopify-app-tanstack/commit/b490599))
+
+### ❤️ Contributors
+
+- Yanuar Aditia ([@ngalor](https://github.com/ngalor))
+
 ## v1.2.0
 
 [compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.1.0...v1.2.0)
