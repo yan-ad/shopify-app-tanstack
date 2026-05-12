@@ -6,7 +6,6 @@ This changelog is managed with changelogen and is updated by running the changel
 
 ## v1.1.0
 
-
 ### 🚀 Enhancements
 
 - Fork clean from shopify-app-react-router ([4286ccd](https://github.com/yanuaraditia/shopify-app-tanstack/commit/4286ccd))
@@ -19,7 +18,7 @@ This changelog is managed with changelogen and is updated by running the changel
 
 ### ❤️ Contributors
 
-- Yanuar Aditia ([@ngalor](https://github.com/ngalor))
+- Yanuar Aditia ([@yanuaraditia](https://github.com/yanuaraditia))
 
 ## v1.0.0
 
