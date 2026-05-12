@@ -23,27 +23,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          registry-url: https://registry.npmjs.org
-          scope: '@yan-ad'
-
-      - name: Install dependencies
-        run: bun install
-
-      - name: Build
-        run: bun run build
-
-      - name: Publish to npm (Trusted Publisher)
-        run: npm publish --access public --provenance
-
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
