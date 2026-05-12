@@ -201,10 +201,8 @@ async function getSessionTokenContext(
 
   logger.debug('Attempting to authenticate session token', {
     shop: getShopFromRequest(request),
-    sessionToken: JSON.stringify({
-      header: headerSessionToken,
-      search: searchParamSessionToken,
-    }),
+    hasHeaderSessionToken: Boolean(headerSessionToken),
+    hasSearchParamSessionToken: Boolean(searchParamSessionToken),
   });
 
   if (config.distribution !== AppDistribution.ShopifyAdmin) {
@@ -212,7 +210,7 @@ async function getSessionTokenContext(
     const dest = new URL(payload.dest);
     const shop = dest.hostname;
 
-    logger.debug('Session token is valid - authenticated', {shop, payload});
+    logger.debug('Session token is valid - authenticated', {shop});
     const sessionId = config.useOnlineTokens
       ? api.session.getJwtSessionId(shop, payload.sub)
       : api.session.getOfflineId(shop);
