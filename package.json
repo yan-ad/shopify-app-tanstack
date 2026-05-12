@@ -58,7 +58,7 @@
     "clean": "rimraf .vite dist",
     "changelog": "changelogen --output CHANGELOG.md",
     "changelog:bump": "changelogen --bump --output CHANGELOG.md",
-    "release": "bun run build && changelogen --release --output CHANGELOG.md && (git rev-parse -q --verify refs/tags/v$npm_package_version >/dev/null || git tag v$npm_package_version) && git push origin v$npm_package_version"
+    "release": "bun run build && changelogen --bump --output CHANGELOG.md && (git rev-parse -q --verify refs/tags/v$npm_package_version >/dev/null || git tag v$npm_package_version) && git push origin v$npm_package_version"
   },
   "publishConfig": {
     "access": "public"
