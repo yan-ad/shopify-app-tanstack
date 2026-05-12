@@ -2,9 +2,6 @@
   "description": "Shopify TanStack Router - to simplify building Shopify apps with TanStack Router",
   "name": "@yanuaraditia/shopify-app-tanstack",
   "version": "1.1.0",
-  "engines": {
-    "node": ">=22.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yanuaraditia/shopify-app-tanstack.git"
