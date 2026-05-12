@@ -29,7 +29,7 @@ export interface CustomerAccountContext {
    * <description>Get store-specific data using the `sessionToken` object.</description>
    * ```ts
    * // app/routes/public/my-route.ts
-   * import { LoaderFunctionArgs, json } from "react-router";
+   * import { LoaderFunctionArgs, json } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    * import { getMyAppData } from "~/db/model.server";
    *
@@ -51,7 +51,7 @@ export interface CustomerAccountContext {
    * <description>Use the `cors` helper to ensure your app can respond to customer account extension requests.</description>
    * ```ts
    * // app/routes/public/my-route.ts
-   * import { LoaderFunctionArgs, json } from "react-router";
+   * import { LoaderFunctionArgs, json } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    * import { getMyAppData } from "~/db/model.server";
    *

@@ -13,10 +13,10 @@ export interface ScopesApiContext {
    * <description>Call `scopes.query` to get scope details.</description>
    * ```ts
    * // /app._index.tsx
-   * import type { LoaderFunctionArgs } from "react-router";
-   * import { useLoaderData } from "react-router";
+   * import type { LoaderFunctionArgs } from "@tanstack/react-router";
+   * import { useLoaderData } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
-   * import { json } from "react-router";
+   * import { json } from "@tanstack/react-router";
    *
    * export const loader = async ({ request }: LoaderFunctionArgs) => {
    *   const { scopes } = await authenticate.admin(request);
@@ -47,10 +47,10 @@ export interface ScopesApiContext {
    * <description>Call `scopes.request` to request optional scopes.</description>
    * ```ts
    * // /app/routes/app.request.tsx
-   * import type { ActionFunctionArgs } from "react-router";
-   * import { useFetcher } from "react-router";
+   * import type { ActionFunctionArgs } from "@tanstack/react-router";
+   * import { useFetcher } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
-   * import { json } from "react-router";
+   * import { json } from "@tanstack/react-router";
    *
    * // Example of an action to POST a request to for optional scopes
    * export const action = async ({ request }: ActionFunctionArgs) => {
@@ -90,10 +90,10 @@ export interface ScopesApiContext {
    * <description>Call `scopes.revoke` to revoke optional scopes.</description>
    * ```ts
    * // /app._index.tsx
-   * import type { ActionFunctionArgs } from "react-router";
-   * import { useFetcher } from "react-router";
+   * import type { ActionFunctionArgs } from "@tanstack/react-router";
+   * import { useFetcher } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
-   * import { json } from "react-router";
+   * import { json } from "@tanstack/react-router";
    *
    * // Example of an action to POST optional scopes to revoke
    * export const action = async ({ request }: ActionFunctionArgs) => {

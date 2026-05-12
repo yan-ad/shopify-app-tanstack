@@ -1,4 +1,4 @@
-import {redirect as reactRouterRedirect} from 'react-router';
+import {redirect as responseRedirect} from '../../../helpers/redirect-response';
 
 import type {BasicParams} from '../../../types';
 import {AppDistribution} from '../../../types';
@@ -12,7 +12,7 @@ export async function redirectToInstallPage(
 ): Promise<never> {
   const installUrl = buildInstallUrl(params, shop, optionalScopes);
   if (params.config.distribution === AppDistribution.ShopifyAdmin) {
-    throw reactRouterRedirect(installUrl);
+    throw responseRedirect(installUrl);
   } else {
     throw redirectWithAppBridgeHeaders(installUrl);
   }

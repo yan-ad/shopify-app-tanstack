@@ -1,4 +1,4 @@
-import {redirect} from 'react-router';
+import {redirect} from '../../../helpers/redirect-response';
 
 import {BasicParams} from '../../../types';
 import {getAppBridgeHeaders} from '../helpers';

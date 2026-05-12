@@ -1,5 +1,4 @@
 import {mount} from '@shopify/react-testing';
-import {MemoryRouter} from 'react-router-dom';
 
 import '../../../__tests__/test-helper';
 
@@ -7,8 +6,8 @@ import {AppProvider} from '../AppProvider';
 
 // Mock react-router's useNavigate hook
 const mockNavigate = jest.fn();
-jest.mock('react-router', () => ({
-  ...jest.requireActual('react-router'),
+jest.mock('@tanstack/react-router', () => ({
+  ...jest.requireActual('@tanstack/react-router'),
   useNavigate: () => mockNavigate,
 }));
 
@@ -18,7 +17,7 @@ describe('<AppProvider />', () => {
   });
 
   const mountWithRouter = (children: React.ReactNode) => {
-    return mount(<MemoryRouter>{children}</MemoryRouter>);
+    return mount(children);
   };
 
   describe.each([
@@ -161,7 +160,7 @@ describe('<AppProvider />', () => {
       handlers.navigate?.(mockEvent);
 
       // THEN
-      expect(mockNavigate).toHaveBeenCalledWith('/test-path');
+      expect(mockNavigate).toHaveBeenCalledWith({href: '/test-path'});
     });
 
     it('cleans up event listener on unmount', () => {

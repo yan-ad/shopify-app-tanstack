@@ -1,6 +1,6 @@
-import {type ActionFunctionArgs} from 'react-router';
-
 import {authenticate} from '../shopify.server';
+
+type ActionFunctionArgs = {request: Request};
 
 export const action = async ({request}: ActionFunctionArgs) => {
   const {admin, payload} = await authenticate.fulfillmentService(request);

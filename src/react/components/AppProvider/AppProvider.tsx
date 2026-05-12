@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {useNavigate} from 'react-router';
+import {useNavigate} from '@tanstack/react-router';
 
 interface BaseProps {
   children: React.ReactNode;
@@ -60,7 +60,7 @@ export type AppProviderProps = NonEmbeddedProps | EmbeddedProps;
  * <description>Wrap your route in the `AppProvider` component and pass in your API key.</description>
  * ```ts
  * // /app/routes/**\/*.ts
- * import {useLoaderData} from 'react-router';
+ * import {useLoaderData} from '@tanstack/react-router';
  * import {authenticate} from '~/shopify.server';
  * import {AppProvider} from '@shopify/shopify-app-react-router/react';
  *
@@ -118,7 +118,7 @@ function AppBridge({apiKey}: AppBridgeProps) {
     const handleNavigate = (event: Event) => {
       const href = (event.target as HTMLElement)?.getAttribute('href');
       if (href) {
-        navigate(href);
+        navigate({href});
       }
     };
 

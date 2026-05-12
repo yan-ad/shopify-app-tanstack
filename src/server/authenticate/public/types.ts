@@ -10,7 +10,7 @@ export interface AuthenticatePublic {
    * <caption>Authenticating a checkout extension request</caption>
    * ```ts
    * // /app/routes/public/widgets.ts
-   * import { LoaderFunctionArgs, json } from "react-router";
+   * import { LoaderFunctionArgs, json } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export const loader = async ({ request }: LoaderFunctionArgs) => {
@@ -30,7 +30,7 @@ export interface AuthenticatePublic {
    * <caption>Authenticating an app proxy request</caption>
    * ```ts
    * // /app/routes/public/widgets.ts
-   * import { LoaderFunctionArgs, json } from "react-router";
+   * import { LoaderFunctionArgs, json } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export const loader = async ({ request }: LoaderFunctionArgs) => {
@@ -55,7 +55,7 @@ export interface AuthenticatePublic {
    * <caption>Authenticating a customer account extension request</caption>
    * ```ts
    * // /app/routes/public/widgets.ts
-   * import { LoaderFunctionArgs, json } from "react-router";
+   * import { LoaderFunctionArgs, json } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export const loader = async ({ request }: LoaderFunctionArgs) => {

@@ -1,6 +1,6 @@
-import type {LoaderFunctionArgs} from 'react-router';
-
 import {authenticate} from '../shopify.server';
+
+type LoaderFunctionArgs = {request: Request};
 
 export const loader = async ({request}: LoaderFunctionArgs) => {
   const {storefront, liquid} = await authenticate.public.appProxy(request);

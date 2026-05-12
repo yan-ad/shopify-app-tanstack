@@ -62,7 +62,7 @@ interface Context {
    * <description>Handle form submissions through an app proxy.</description>
    * ```ts
    * // app/routes/apps.proxy.my-action.tsx
-   * import { redirect } from "react-router";
+   * import { redirect } from "@tanstack/react-router";
    * import { authenticate } from "~/shopify.server";
    *
    * export async function loader({ request }) {
@@ -129,7 +129,7 @@ export interface AppProxyContextWithSession extends Context {
    * <description>Get the session for the shop that initiated the request to the app proxy.</description>
    * ```ts
    * // app/routes/**\/.ts
-   * import { json } from "react-router";
+   * import { json } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    * import { getMyAppModelData } from "~/db/model.server";
    *
@@ -155,7 +155,7 @@ export interface AppProxyContextWithSession extends Context {
    * <description>Use the `admin` object to interact with the admin GraphQL API.</description>
    * ```ts
    * // app/routes/**\/.ts
-   * import { json } from "react-router";
+   * import { json } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export async function action({ request }: ActionFunctionArgs) {
@@ -192,7 +192,7 @@ export interface AppProxyContextWithSession extends Context {
    * <description>Use the `storefront` object to interact with the GraphQL API.</description>
    * ```ts
    * // app/routes/**\/.ts
-   * import { json } from "react-router";
+   * import { json } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export async function action({ request }: ActionFunctionArgs) {

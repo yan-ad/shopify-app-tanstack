@@ -1,4 +1,4 @@
-import {redirect as reactRouterRedirect} from 'react-router';
+import {redirect as responseRedirect} from '../../../helpers/redirect-response';
 
 import {BasicParams, AppDistribution} from '../../../types';
 import {getSessionTokenHeader} from '../../helpers/get-session-token-header';
@@ -58,7 +58,7 @@ export function redirectFactory(
           target,
         });
       } else {
-        return reactRouterRedirect(parsedUrl.toString(), init);
+        return responseRedirect(parsedUrl.toString(), init);
       }
     } else if (isDataRequest(request)) {
       throw redirectWithAppBridgeHeaders(parsedUrl.toString());
@@ -68,7 +68,7 @@ export function redirectFactory(
         target,
       });
     }
-    return reactRouterRedirect(url, init);
+    return responseRedirect(url, init);
   };
 }
 

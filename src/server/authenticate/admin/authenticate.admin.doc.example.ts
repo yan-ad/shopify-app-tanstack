@@ -1,7 +1,8 @@
-import {type ActionFunctionArgs, data} from 'react-router';
 import {GraphqlQueryError} from '@shopify/shopify-api';
 
 import {authenticate} from '../shopify.server';
+
+type ActionFunctionArgs = {request: Request};
 
 export const action = async ({request}: ActionFunctionArgs) => {
   const {admin, redirect} = await authenticate.admin(request);
@@ -26,7 +27,10 @@ export const action = async ({request}: ActionFunctionArgs) => {
     return redirect('/app/product-updated');
   } catch (error) {
     if (error instanceof GraphqlQueryError) {
-      return data({errors: error.body?.errors}, {status: 500});
+      return new Response(JSON.stringify({errors: error.body?.errors}), {
+        status: 500,
+        headers: {'Content-Type': 'application/json'},
+      });
     }
 
     return new Response('Failed to update product title', {status: 500});

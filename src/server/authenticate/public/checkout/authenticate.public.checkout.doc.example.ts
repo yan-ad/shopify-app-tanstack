@@ -1,7 +1,8 @@
-import type {ActionFunctionArgs, LoaderFunctionArgs} from 'react-router';
-
 import {authenticate} from '../shopify.server';
 import {getOffers} from '../offers.server';
+
+type LoaderFunctionArgs = {request: Request};
+type ActionFunctionArgs = {request: Request};
 
 // The loader responds to preflight requests from Shopify
 export const loader = async ({request}: LoaderFunctionArgs) => {

@@ -19,7 +19,7 @@ export interface StorefrontContext {
    * <description>Use `storefront.graphql` to make query / mutation requests.</description>
    * ```ts
    * // app/routes/**\/.ts
-   * import { json } from "react-router";
+   * import { json } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export async function action({ request }: ActionFunctionArgs) {
@@ -36,7 +36,7 @@ export interface StorefrontContext {
    * <description>Catch `GraphqlQueryError` errors to see error messages from the API.</description>
    * ```ts
    * // /app/routes/**\/*.ts
-   * import { ActionFunctionArgs } from "react-router";
+   * import { ActionFunctionArgs } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export const action = async ({ request }: ActionFunctionArgs) => {

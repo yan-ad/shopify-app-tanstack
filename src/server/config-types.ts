@@ -163,7 +163,7 @@ export interface AppConfigArg<
    *
    * ```ts
    * // /app/routes/webhooks.ts
-   * import { ActionFunctionArgs } from "react-router";
+   * import { ActionFunctionArgs } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    * import db from "../db.server";
    *
@@ -258,7 +258,7 @@ export interface AppConfigArg<
    * export const authenticate = shopify.authenticate;
    *
    * // /app/routes/auth/$.jsx
-   * import { LoaderFunctionArgs } from "react-router";
+   * import { LoaderFunctionArgs } from "@tanstack/react-router";
    * import { authenticate } from "../../shopify.server";
    *
    * export async function loader({ request }: LoaderFunctionArgs) {

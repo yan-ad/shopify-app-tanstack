@@ -1,4 +1,4 @@
-import {HeadersArgs} from 'react-router';
+import {HeadersArgs} from './types';
 
 export function headersBoundary(headers: HeadersArgs): Headers {
   const {parentHeaders, loaderHeaders, actionHeaders, errorHeaders} = headers;

@@ -15,7 +15,7 @@ export interface UnauthenticatedStorefrontContext {
    * <description>Get your app's shop-specific data using the returned offline `session` object.</description>
    * ```ts
    * // app/routes/**\/.ts
-   * import { LoaderFunctionArgs, json } from "react-router";
+   * import { LoaderFunctionArgs, json } from "@tanstack/react-router";
    * import { unauthenticated } from "../shopify.server";
    * import { getMyAppData } from "~/db/model.server";
    *
@@ -36,7 +36,7 @@ export interface UnauthenticatedStorefrontContext {
    * <description>Use `storefront.graphql` to make query / mutation requests.</description>
    * ```ts
    * // app/routes/**\/.ts
-   * import { json } from "react-router";
+   * import { json } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export async function action({ request }: ActionFunctionArgs) {
@@ -54,7 +54,7 @@ export interface UnauthenticatedStorefrontContext {
    * <description>Catch `GraphqlQueryError` errors to see error messages from the API.</description>
    * ```ts
    * // /app/routes/**\/*.ts
-   * import { ActionFunctionArgs } from "react-router";
+   * import { ActionFunctionArgs } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export const action = async ({ request }: ActionFunctionArgs) => {

@@ -16,7 +16,7 @@ export interface FulfillmentServiceContext {
    * <description>Use the session associated with this request.</description>
    * ```ts
    * // /app/routes/fulfillment_service_notification.tsx
-   * import { ActionFunctionArgs } from "react-router";
+   * import { ActionFunctionArgs } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export const action = async ({ request }: ActionFunctionArgs) => {
@@ -39,7 +39,7 @@ export interface FulfillmentServiceContext {
    * <description>Use the session associated with this request to use the Admin GraphQL API </description>
    * ```ts
    * // /app/routes/fulfillment_order_notification.ts
-   * import { ActionFunctionArgs } from "react-router";
+   * import { ActionFunctionArgs } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export async function action({ request }: ActionFunctionArgs) {
@@ -61,7 +61,7 @@ export interface FulfillmentServiceContext {
    * <description>Get the request's POST payload.</description>
    * ```ts
    * /app/routes/fulfillment_order_notification.ts
-   * import { ActionFunction } from "react-router";
+   * import { ActionFunction } from "@tanstack/react-router";
    * import { authenticate } from "../shopify.server";
    *
    * export const action: ActionFunction = async ({ request }) => {

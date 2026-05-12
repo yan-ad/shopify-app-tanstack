@@ -1,4 +1,4 @@
-import {redirect} from 'react-router';
+import {redirect} from '../../../helpers/redirect-response';
 
 import type {BasicParams} from '../../../types';
 import {AppDistribution} from '../../../types';
