@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 
 This changelog is managed with changelogen and is updated by running the changelog workflow.
 
+## v1.3.3
+
+[compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.3.1...v1.3.3)
+
+### 🩹 Fixes
+
+- **release:** Add preflight checks for version consistency in publish workflow ([a586073](https://github.com/yanuaraditia/shopify-app-tanstack/commit/a586073))
+
+### ❤️ Contributors
+
+- Yanuar Aditia ([@ngalor](https://github.com/ngalor))
+
+## v1.3.2
+
+[compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.3.1...v1.3.2)
+
+### 🩹 Fixes
+
+- **release:** Add preflight checks for version consistency in publish workflow ([a586073](https://github.com/yanuaraditia/shopify-app-tanstack/commit/a586073))
+
+### ❤️ Contributors
+
+- Yanuar Aditia ([@ngalor](https://github.com/ngalor))
+
 ## v1.3.1
 
 [compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.3.0...v1.3.1)

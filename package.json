@@ -1,7 +1,7 @@
 {
   "description": "Shopify TanStack Router - to simplify building Shopify apps with TanStack Router",
   "name": "@yanuaraditia/shopify-app-tanstack",
-  "version": "1.3.1",
+  "version": "1.3.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yanuaraditia/shopify-app-tanstack.git"
@@ -58,7 +58,7 @@
     "clean": "rimraf .vite dist",
     "changelog": "changelogen --output CHANGELOG.md",
     "changelog:bump": "changelogen --bump --output CHANGELOG.md",
-    "release": "bun run build && changelogen --bump --output CHANGELOG.md && (git rev-parse -q --verify refs/tags/v$npm_package_version >/dev/null || git tag v$npm_package_version) && git push origin v$npm_package_version"
+    "release": "bun run build && changelogen --bump --output CHANGELOG.md && TAG=v$(node -p \"require('./package.json').version\") && (git rev-parse -q --verify refs/tags/$TAG >/dev/null || git tag $TAG) && git push origin $TAG"
   },
   "publishConfig": {
     "access": "public"
