@@ -24,10 +24,7 @@ export async function validateSessionToken(
     const payload = await api.session.decodeSessionToken(token, {
       checkAudience,
     });
-    logger.debug('Session token is valid - validated', {
-      shop,
-      payload: JSON.stringify(payload),
-    });
+    logger.debug('Session token is valid - validated', {shop});
 
     return payload;
   } catch (error) {
