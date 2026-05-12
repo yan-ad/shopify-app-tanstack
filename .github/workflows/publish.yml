@@ -40,29 +40,6 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Preflight publish context
-        run: |
-          set -euo pipefail
-
-          PACKAGE_NAME="$(node -p 'require("./package.json").name')"
-          PACKAGE_VERSION="$(node -p 'require("./package.json").version')"
-          TAG_NAME="${GITHUB_REF_NAME}"
-
-          echo "Repository: ${GITHUB_REPOSITORY}"
-          echo "Workflow: ${GITHUB_WORKFLOW}"
-          echo "Ref: ${GITHUB_REF}"
-          echo "Tag: ${TAG_NAME}"
-          echo "Package: ${PACKAGE_NAME}"
-          echo "Version: ${PACKAGE_VERSION}"
-
-          echo "Current npm version (if already published):"
-          npm view "${PACKAGE_NAME}" version || true
-
-          if [ "${TAG_NAME}" != "v${PACKAGE_VERSION}" ]; then
-            echo "Tag (${TAG_NAME}) does not match package version (v${PACKAGE_VERSION})."
-            exit 1
-          fi
-
       - name: Publish to npm (Trusted Publisher)
         run: npm publish --provenance --access public
 
