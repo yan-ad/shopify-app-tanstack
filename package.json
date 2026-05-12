@@ -52,6 +52,9 @@
   },
   "scripts": {
     "build-docs": "sh docs/build-docs.sh",
+    "docs:dev": "bun run --cwd docs dev",
+    "docs:build": "bun run --cwd docs build",
+    "docs:preview": "bun run --cwd docs preview",
     "validate-docs": "sh ./docs/build-docs.sh isTest && bun run compare-docs",
     "lint": "eslint .",
     "build": "bun run vite:esm && bun run vite:cjs && bun run tsc -p ./tsconfig.build.json",
@@ -82,7 +85,6 @@
   ],
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260511.1",
-    "changelogen": "^0.6.2",
     "@shopify/eslint-plugin": "^50.0.0",
     "@shopify/generate-docs": "^1.2.0",
     "@shopify/prettier-config": "^1.1.4",
@@ -91,6 +93,7 @@
     "@shopify/typescript-configs": "^5.1.2",
     "@tanstack/react-router": "^1.169.2",
     "@types/react": "^19.2.14",
+    "changelogen": "^0.6.2",
     "eslint": "^9.39.0",
     "eslint-import-resolver-node": "^0.3.10",
     "jiti": "^2.7.0",

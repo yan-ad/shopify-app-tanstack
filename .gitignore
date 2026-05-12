@@ -18,3 +18,4 @@ bundle/
 rollup.config-*.cjs
 .cursor
 .worktrees/
+*/.vitepress/cache
