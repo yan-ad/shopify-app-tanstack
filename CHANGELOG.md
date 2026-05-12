@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 This changelog is managed with changelogen and is updated by running the changelog workflow.
 
+## v1.3.1
+
+[compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.3.0...v1.3.1)
+
+### 🩹 Fixes
+
+- **release:** Streamline release script to include tag creation and push ([8024eb4](https://github.com/yanuaraditia/shopify-app-tanstack/commit/8024eb4))
+
+### ❤️ Contributors
+
+- Yanuar Aditia ([@ngalor](https://github.com/ngalor))
+
 ## v1.3.0
 
 [compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.2.0...v1.3.0)
