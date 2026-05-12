@@ -22,21 +22,22 @@ If your app currently uses `@shopify/shopify-app-react-router`, use this checkli
 >
 > This README assumes your app is already on the React Router template baseline.
 
-### 0. Ensure your `shopify.web.toml` matches React Router runtime
+### 1. Ensure your `shopify.web.toml` matches TanStack Router runtime
 
 If your app still has Remix-oriented process config, update `shopify.web.toml`:
 
-```toml
+```diff
 name = "remix"
 roles = ["frontend", "backend"]
 webhooks_path = "/webhooks/app/uninstalled"
 
 [commands]
 predev = "bunx prisma generate"
-dev = "bunx prisma migrate deploy && bun react-router dev"
+- dev = "bunx prisma migrate deploy && bun react-router dev"
++ dev = "bunx prisma migrate deploy && bun run dev"
 ```
 
-### 1. Replace package dependencies
+### 2. Replace package dependencies
 
 ```diff
 - bun remove @shopify/shopify-app-react-router
@@ -67,7 +68,7 @@ bun add -d @shopify/app-bridge-ui-types
   }
 ```
 
-### 2. Update server imports
+### 3. Update server imports
 
 In your server bootstrap (for example `app/shopify.server.ts`), replace React Router package imports with TanStack package imports.
 
@@ -85,7 +86,7 @@ If you use boundary headers, update those imports too:
 + import {boundary} from "@yanuaraditia/shopify-app-tanstack/server";
 ```
 
-### 3. Wrap protected UI routes with the new AppProvider
+### 4. Wrap protected UI routes with the new AppProvider
 
 For embedded admin routes, use `AppProvider` from this package's React entrypoint:
 
@@ -155,7 +156,7 @@ You can keep it wired and disable it when needed:
 </AppProvider>
 ```
 
-### 4. Move route definitions to TanStack Router
+### 5. Move route definitions to TanStack Router
 
 This package expects TanStack Router runtime patterns, so migrate React Router loaders/actions/components to TanStack Router route files.
 
@@ -165,7 +166,7 @@ At a minimum:
 - Keep your existing `authenticate.admin(request)` logic in route loaders.
 - Continue returning `apiKey` from protected route loaders and pass it to `AppProvider embedded apiKey={...}`.
 
-### 5. Migrate route loaders and actions
+### 6. Migrate route loaders and actions
 
 TanStack Router does not use React Router `action` in the same way, so you should split route logic like this:
 
@@ -205,12 +206,12 @@ For each migrated route:
 - Keep auth checks in both loader and mutation path.
 - Revalidate route data after successful mutation.
 
-### 6. Update app entry and navigation usage
+### 7. Update app entry and navigation usage
 
 - Replace React Router navigation hooks/components usage with TanStack Router equivalents (`useNavigate`, `Link`, and route APIs from `@tanstack/react-router`).
 - Ensure embedded app navigation still flows through App Bridge events by rendering pages inside this package's `AppProvider`.
 
-### 7. Validate locally
+### 8. Validate locally
 
 ```sh
 bun run build
