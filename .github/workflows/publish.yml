@@ -41,7 +41,7 @@ jobs:
         run: bun run build
 
       - name: Publish to npm (Trusted Publisher)
-        run: npm publish --provenance --access public
+        run: npm publish --access public
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
