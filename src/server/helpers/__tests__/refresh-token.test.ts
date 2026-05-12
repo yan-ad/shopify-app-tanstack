@@ -2,6 +2,7 @@ import {HttpResponseError, InvalidJwtError} from '@shopify/shopify-api';
 import {setUpValidSession as setUpValidSessionImport} from '@shopify/shopify-api/test-helpers';
 import {MemorySessionStorage} from '@shopify/shopify-app-session-storage-memory';
 
+import type {JestMock} from '../../../__tests__/vitest-jest-compat';
 import {testConfig, TEST_SHOP} from '../../__test-helpers';
 import {deriveApi} from '../../shopify-app';
 import {BasicParams} from '../../types';
@@ -10,7 +11,7 @@ import refreshToken from '../refresh-token';
 describe('refreshToken', () => {
   let sessionStorage: MemorySessionStorage;
   let params: BasicParams;
-  let mockRefreshToken: jest.Mock;
+  let mockRefreshToken: JestMock;
 
   beforeEach(() => {
     sessionStorage = new MemorySessionStorage();

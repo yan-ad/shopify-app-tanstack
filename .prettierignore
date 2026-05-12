@@ -1,6 +1,5 @@
 .changeset
 coverage
 
-packages/apps/shopify-app-remix/docs/**/*.json
-packages/apps/shopify-app-remix/**/*.example.tsx?
-packages/apps/shopify-api/rest/admin
+docs/**/*.json
+**/*.example.tsx?

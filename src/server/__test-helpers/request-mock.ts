@@ -1,4 +1,4 @@
-import fetchMock, {MockParams} from 'jest-fetch-mock';
+import fetchMock, {MockParams} from './fetch-mock';
 
 interface MockExternalRequestArg {
   request?: Request;

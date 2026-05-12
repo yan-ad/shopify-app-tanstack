@@ -25,7 +25,7 @@
       "esnext.asynciterable",
       "ES2021",
     ],
-    "types": ["@cloudflare/workers-types", "node", "jest"],
+    "types": ["@cloudflare/workers-types", "node", "vitest/globals"],
     "baseUrl": ".",
     "outDir": "./dist/ts",
     "rootDir": "src"

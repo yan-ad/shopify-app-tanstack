@@ -1,6 +1,7 @@
 import {MemorySessionStorage} from '@shopify/shopify-app-session-storage-memory';
 import {SessionStorage} from '@shopify/shopify-app-session-storage';
 
+import type {JestMock} from '../../../__tests__/vitest-jest-compat';
 import {testConfig, TEST_SHOP} from '../../__test-helpers';
 import {expectTokenRefresh} from '../../__test-helpers/expect-token-refresh';
 import {deriveApi} from '../../shopify-app';
@@ -12,7 +13,7 @@ import {FutureFlagOptions} from '../../future/flags';
 describe('ensureValidOfflineSession', () => {
   let sessionStorage: MemorySessionStorage;
   let params: BasicParams;
-  let mockRefreshToken: jest.Mock;
+  let mockRefreshToken: JestMock;
 
   describe('when no session exists', () => {
     beforeEach(() => {

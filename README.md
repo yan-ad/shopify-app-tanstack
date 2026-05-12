@@ -8,7 +8,7 @@ This is a community-maintained project inspired by Shopify's app tooling, rebuil
 
 It is not an official Shopify package.
 
-This package makes it easy to build Shopify apps with TanStack Router while keeping familiar Shopify app primitives.
+This package is built for the Vite ecosystem, making it easy to build Shopify apps with TanStack Router while keeping familiar Shopify app primitives.
 
 ## Getting started
 
@@ -30,6 +30,7 @@ Use the migration notes in this repository to move existing Shopify app routes/l
 Getting started:
 
 - [TanStack Router docs](https://tanstack.com/router/latest)
+- [Vite docs](https://vite.dev/guide/)
 - [Build a Shopify app](https://shopify.dev/docs/apps/build/build)
 - [Project repository](https://github.com/yanuaraditia/shopify-app-tanstack)
 

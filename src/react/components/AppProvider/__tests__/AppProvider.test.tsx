@@ -1,13 +1,15 @@
-import {mount} from '@shopify/react-testing';
+import {act} from 'react';
+import {createRoot} from 'react-dom/client';
+import {vi} from 'vitest';
 
-import '../../../__tests__/test-helper';
+import '../../../__tests__/setup-dom-test-helper';
 
 import {AppProvider} from '../AppProvider';
 
 // Mock react-router's useNavigate hook
 const mockNavigate = jest.fn();
-jest.mock('@tanstack/react-router', () => ({
-  ...jest.requireActual('@tanstack/react-router'),
+vi.mock('@tanstack/react-router', async () => ({
+  ...(await vi.importActual('@tanstack/react-router')),
   useNavigate: () => mockNavigate,
 }));
 
@@ -16,8 +18,24 @@ describe('<AppProvider />', () => {
     jest.clearAllMocks();
   });
 
-  const mountWithRouter = (children: React.ReactNode) => {
-    return mount(children);
+  const renderWithRouter = (children: React.ReactNode) => {
+    const container = document.createElement('div');
+    document.body.appendChild(container);
+    const root = createRoot(container);
+
+    act(() => {
+      root.render(children);
+    });
+
+    return {
+      container,
+      unmount() {
+        act(() => {
+          root.unmount();
+        });
+        container.remove();
+      },
+    };
   };
 
   describe.each([
@@ -26,88 +44,109 @@ describe('<AppProvider />', () => {
   ])('when embedded is %s & apiKey is %s', (embedded, apiKey) => {
     it('renders children', () => {
       // WHEN
-      const component = mountWithRouter(
+      const {container, unmount} = renderWithRouter(
         <AppProvider embedded={embedded as any} apiKey={apiKey as any}>
           <div>Hello world</div>
         </AppProvider>,
       );
 
       // THEN
-      expect(component).not.toContainReactComponent('script', {
-        src: 'https://cdn.shopify.com/shopifycloud/app-bridge.js',
-      });
-      expect(component).toContainReactHtml('Hello world');
+      expect(
+        container.querySelector(
+          'script[src="https://cdn.shopify.com/shopifycloud/app-bridge.js"]',
+        ),
+      ).toBeNull();
+      expect(container.textContent).toContain('Hello world');
+
+      unmount();
     });
 
     it('renders the app-bridge-ui-experimental script', () => {
       // WHEN
-      const component = mountWithRouter(
+      const {container, unmount} = renderWithRouter(
         <AppProvider embedded={embedded as any} apiKey={apiKey as any}>
           <div>Hello world</div>
         </AppProvider>,
       );
 
       // THEN
-      expect(component).toContainReactComponent('script', {
-        src: 'https://cdn.shopify.com/shopifycloud/polaris.js',
-      });
+      expect(
+        container.querySelector(
+          'script[src="https://cdn.shopify.com/shopifycloud/polaris.js"]',
+        ),
+      ).not.toBeNull();
+
+      unmount();
     });
 
     it('does not render the app bridge script', () => {
       // WHEN
-      const component = mountWithRouter(
+      const {container, unmount} = renderWithRouter(
         <AppProvider embedded={embedded as any} apiKey={apiKey as any}>
           <div>Hello world</div>
         </AppProvider>,
       );
 
       // THEN
-      expect(component).not.toContainReactComponent('script', {
-        src: 'https://cdn.shopify.com/shopifycloud/app-bridge.js',
-      });
+      expect(
+        container.querySelector(
+          'script[src="https://cdn.shopify.com/shopifycloud/app-bridge.js"]',
+        ),
+      ).toBeNull();
+
+      unmount();
     });
   });
 
   describe('when embedded is true & apiKey is provided', () => {
     it('renders children', () => {
       // WHEN
-      const component = mountWithRouter(
+      const {container, unmount} = renderWithRouter(
         <AppProvider embedded apiKey="test-api-key">
           <div>Hello world</div>
         </AppProvider>,
       );
 
       // THEN
-      expect(component).toContainReactHtml('Hello world');
+      expect(container.textContent).toContain('Hello world');
+
+      unmount();
     });
 
     it('renders the app-bridge-ui-experimental script', () => {
       // WHEN
-      const component = mountWithRouter(
+      const {container, unmount} = renderWithRouter(
         <AppProvider embedded apiKey="test-api-key">
           <div>Hello world</div>
         </AppProvider>,
       );
 
       // THEN
-      expect(component).toContainReactComponent('script', {
-        src: 'https://cdn.shopify.com/shopifycloud/polaris.js',
-      });
+      expect(
+        container.querySelector(
+          'script[src="https://cdn.shopify.com/shopifycloud/polaris.js"]',
+        ),
+      ).not.toBeNull();
+
+      unmount();
     });
 
     it('renders the app bridge script', () => {
       // WHEN
-      const component = mountWithRouter(
+      const {container, unmount} = renderWithRouter(
         <AppProvider embedded apiKey="test-api-key">
           <div>Hello world</div>
         </AppProvider>,
       );
 
       // THEN
-      expect(component).toContainReactComponent('script', {
-        src: 'https://cdn.shopify.com/shopifycloud/app-bridge.js',
-        'data-api-key': 'test-api-key',
-      });
+      const appBridgeScript = container.querySelector(
+        'script[src="https://cdn.shopify.com/shopifycloud/app-bridge.js"]',
+      );
+      expect(appBridgeScript).not.toBeNull();
+      expect(appBridgeScript?.getAttribute('data-api-key')).toBe('test-api-key');
+
+      unmount();
     });
 
     it('sets up navigation event listener', () => {
@@ -116,7 +155,7 @@ describe('<AppProvider />', () => {
       const addEventListenerSpy = jest.spyOn(document, 'addEventListener');
 
       // WHEN
-      mountWithRouter(
+      const {unmount} = renderWithRouter(
         <AppProvider embedded apiKey={apiKey}>
           <div>Hello world</div>
         </AppProvider>,
@@ -127,6 +166,8 @@ describe('<AppProvider />', () => {
         'shopify:navigate',
         expect.any(Function),
       );
+
+      unmount();
     });
 
     it('handles navigation events correctly', () => {
@@ -145,7 +186,7 @@ describe('<AppProvider />', () => {
         });
 
       // WHEN
-      mountWithRouter(
+      const {unmount} = renderWithRouter(
         <AppProvider embedded apiKey={apiKey}>
           <div>Hello world</div>
         </AppProvider>,
@@ -161,6 +202,8 @@ describe('<AppProvider />', () => {
 
       // THEN
       expect(mockNavigate).toHaveBeenCalledWith({href: '/test-path'});
+
+      unmount();
     });
 
     it('cleans up event listener on unmount', () => {
@@ -172,7 +215,7 @@ describe('<AppProvider />', () => {
       );
 
       // WHEN
-      const component = mountWithRouter(
+      const component = renderWithRouter(
         <AppProvider embedded apiKey={apiKey}>
           <div>Hello world</div>
         </AppProvider>,

@@ -69,10 +69,13 @@ describe('authenticate', () => {
     );
 
     // THEN
-    const [_, onlineSession] =
-      await config.sessionStorage.findSessionsByShop(TEST_SHOP);
+    const allSessions = await config.sessionStorage.findSessionsByShop(TEST_SHOP);
+    const persistedSession = allSessions.find(
+      (storedSession) => storedSession.id === session.id,
+    );
 
-    expect(onlineSession).toEqual(session);
+    expect(persistedSession).toBeDefined();
+    expect(persistedSession).toEqual(session);
     expect(session).toMatchObject({
       accessToken: '123abc-exchanged-from-session-token',
       id: `${TEST_SHOP}_${USER_ID}`,
