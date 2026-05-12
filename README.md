@@ -49,6 +49,20 @@ If your app currently uses `@shopify/shopify-app-react-router`, use this checkli
 >
 > This README assumes your app is already on the React Router template baseline.
 
+### 0. Ensure your `shopify.web.toml` matches React Router runtime
+
+If your app still has Remix-oriented process config, update `shopify.web.toml`:
+
+```toml
+name = "remix"
+roles = ["frontend", "backend"]
+webhooks_path = "/webhooks/app/uninstalled"
+
+[commands]
+predev = "bunx prisma generate"
+dev = "bunx prisma migrate deploy && bun react-router dev"
+```
+
 ### 1. Replace package dependencies
 
 ```diff
