@@ -40,11 +40,11 @@ features:
 ## Quick start
 
 ```sh
-bun add @yanuaraditia/shopify-app-tanstack @tanstack/react-router
+bun add @yan-ad/shopify-app-tanstack @tanstack/react-router
 ```
 
 ```ts
-import {shopifyApp} from '@yanuaraditia/shopify-app-tanstack/server';
+import {shopifyApp} from '@yan-ad/shopify-app-tanstack/server';
 
 export const shopify = shopifyApp({
   apiKey: process.env.SHOPIFY_API_KEY!,

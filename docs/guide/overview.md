@@ -1,6 +1,6 @@
 # Overview
 
-@yanuaraditia/shopify-app-tanstack is a library package that ports Shopify app primitives to a TanStack Router-oriented setup.
+@yan-ad/shopify-app-tanstack is a library package that ports Shopify app primitives to a TanStack Router-oriented setup.
 
 ## Goals
 

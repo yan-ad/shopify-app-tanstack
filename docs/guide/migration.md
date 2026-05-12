@@ -1,6 +1,6 @@
 # Migration
 
-For migration from `@shopify/shopify-app-react-router` to `@yanuaraditia/shopify-app-tanstack`, use the repository wiki guide:
+For migration from `@shopify/shopify-app-react-router` to `@yan-ad/shopify-app-tanstack`, use the repository wiki guide:
 
 - https://github.com/yanuaraditia/shopify-app-tanstack/wiki/Migration-from-shopify%E2%80%90app%E2%80%90react%E2%80%90router
 

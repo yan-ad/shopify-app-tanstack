@@ -69,7 +69,7 @@ export interface StorefrontContext {
    *
    * ```ts
    * // /app/shopify.server.ts
-   * import { shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...

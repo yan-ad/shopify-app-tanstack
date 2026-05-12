@@ -12,7 +12,7 @@ export const boundary = {
    * <caption>Catching errors in a route</caption>
    * ```ts
    * // /app/routes/admin/widgets.ts
-   * import { boundary } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { boundary } from "@yan-ad/shopify-app-tanstack/server";
    *
    * export function ErrorBoundary() {
    *   return boundary.error(useRouteError());
@@ -28,7 +28,7 @@ export const boundary = {
    * <caption>Catching errors in a route</caption>
    * ```ts
    * // /app/routes/admin/widgets.ts
-   * import { boundary } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { boundary } from "@yan-ad/shopify-app-tanstack/server";
    *
    * export const headers = (headersArgs) => {
    *   return boundary.headers(headersArgs);

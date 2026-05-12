@@ -33,7 +33,7 @@ interface AdminContextInternal<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // shopify.server.ts
-   * import { shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc
@@ -58,7 +58,7 @@ interface AdminContextInternal<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // shopify.server.ts
-   * import { shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc
@@ -131,7 +131,7 @@ export interface EmbeddedAdminContext<
    * ```
    * ```ts
    * // shopify.server.ts
-   * import { shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc

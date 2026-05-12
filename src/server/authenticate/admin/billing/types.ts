@@ -149,7 +149,7 @@ export interface BillingContext<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // shopify.server.ts
-   * import { shopifyApp, BillingInterval } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp, BillingInterval } from "@yan-ad/shopify-app-tanstack/server";
    *
    * export const MONTHLY_PLAN = 'Monthly subscription';
    *
@@ -195,7 +195,7 @@ export interface BillingContext<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // shopify.server.ts
-   * import { shopifyApp, BillingInterval } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp, BillingInterval } from "@yan-ad/shopify-app-tanstack/server";
    *
    * export const MONTHLY_PLAN = 'Monthly subscription';
    * export const ANNUAL_PLAN = 'Annual subscription';
@@ -257,7 +257,7 @@ export interface BillingContext<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // shopify.server.ts
-   * import { shopifyApp, BillingInterval } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp, BillingInterval } from "@yan-ad/shopify-app-tanstack/server";
    *
    * export const MONTHLY_PLAN = 'Monthly subscription';
    * export const ANNUAL_PLAN = 'Annual subscription';
@@ -340,7 +340,7 @@ export interface BillingContext<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // shopify.server.ts
-   * import { shopifyApp, BillingInterval } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp, BillingInterval } from "@yan-ad/shopify-app-tanstack/server";
    *
    * export const MONTHLY_PLAN = 'Monthly subscription';
    * export const ANNUAL_PLAN = 'Annual subscription';
@@ -402,7 +402,7 @@ export interface BillingContext<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // shopify.server.ts
-   * import { shopifyApp, BillingInterval } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp, BillingInterval } from "@yan-ad/shopify-app-tanstack/server";
    *
    * export const MONTHLY_PLAN = 'Monthly subscription';
    * export const ANNUAL_PLAN = 'Annual subscription';
@@ -468,7 +468,7 @@ export interface BillingContext<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // shopify.server.ts
-   * import { shopifyApp, BillingInterval } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp, BillingInterval } from "@yan-ad/shopify-app-tanstack/server";
    *
    * export const MONTHLY_PLAN = 'Monthly subscription';
    * export const ANNUAL_PLAN = 'Annual subscription';
@@ -533,7 +533,7 @@ export interface BillingContext<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // shopify.server.ts
-   * import { shopifyApp, BillingInterval } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp, BillingInterval } from "@yan-ad/shopify-app-tanstack/server";
    *
    * export const USAGE_PLAN = 'Usage subscription';
    *
@@ -588,7 +588,7 @@ export interface BillingContext<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // shopify.server.ts
-   * import { shopifyApp, BillingInterval } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp, BillingInterval } from "@yan-ad/shopify-app-tanstack/server";
    *
    * export const USAGE_PLAN = 'Usage subscription';
    *

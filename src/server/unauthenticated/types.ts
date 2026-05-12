@@ -13,7 +13,7 @@ export interface Unauthenticated {
    * <caption>Responding to a request not controlled by Shopify.</caption>
    * ```ts
    * // /app/shopify.server.ts
-   * import { ApiVersion, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { ApiVersion, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc

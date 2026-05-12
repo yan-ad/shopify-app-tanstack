@@ -20,7 +20,7 @@ export interface AppProxyLinkProps extends React.DetailedHTMLProps<
  * ```ts
  * // /app/routes/**\/*.ts
  * import {authenticate} from '~/shopify.server';
- * import {AppProxyProvider, AppProxyLink} from '@yanuaraditia/shopify-app-tanstack/react';
+ * import {AppProxyProvider, AppProxyLink} from '@yan-ad/shopify-app-tanstack/react';
  *
  * export async function loader({ request }) {
  *   await authenticate.public.appProxy(request);

@@ -80,7 +80,7 @@ interface Authenticate<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // /app/shopify.server.ts
-   * import { ApiVersion, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { ApiVersion, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc
@@ -117,7 +117,7 @@ interface Authenticate<Config extends AppConfigArg> {
    * ```
    * ```ts
    * // /app/shopify.server.ts
-   * import { ApiVersion, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { ApiVersion, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc
@@ -238,7 +238,7 @@ interface Authenticate<Config extends AppConfigArg> {
    * </description>
    * ```ts
    * // app/shopify.server.ts
-   * import { DeliveryMethod, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { DeliveryMethod, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   webhooks: {
@@ -271,7 +271,7 @@ export interface ShopifyAppBase<Config extends AppConfigArg> {
    * <description>Import the `@shopify/shopify-app-session-storage-prisma` package to store sessions in your Prisma database.</description>
    * ```ts
    * // /app/shopify.server.ts
-   * import { shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    * import { PrismaSessionStorage } from "@shopify/shopify-app-session-storage-prisma";
    * import prisma from "~/db.server";
    *
@@ -296,7 +296,7 @@ export interface ShopifyAppBase<Config extends AppConfigArg> {
    *
    * ```
    * // ~/shopify.server.ts
-   * import { shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc
@@ -345,7 +345,7 @@ export interface ShopifyAppBase<Config extends AppConfigArg> {
    * <description>Trigger the registration to create the shop-specific webhook subscriptions after a merchant installs your app using the `afterAuth` hook. Learn more about [subscribing to webhooks.](https://shopify.dev/docs/api/shopify-app-react-router/v3/guide-webhooks)</description>
    * ```ts
    * // app/shopify.server.ts
-   * import { DeliveryMethod, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { DeliveryMethod, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   webhooks: {
@@ -376,7 +376,7 @@ export interface ShopifyAppBase<Config extends AppConfigArg> {
    * <description>Use the functions in `authenticate` to validate requests coming from Shopify.</description>
    * ```ts
    * // /app/shopify.server.ts
-   * import { ApiVersion, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { ApiVersion, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc
@@ -406,7 +406,7 @@ export interface ShopifyAppBase<Config extends AppConfigArg> {
    * <description>Create contexts for requests that don't come from Shopify.</description>
    * ```ts
    * // /app/shopify.server.ts
-   * import { ApiVersion, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { ApiVersion, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc
@@ -444,7 +444,7 @@ export interface ShopifyAppLogin {
    * <description>Use `shopify.login` to create a login form, in a route that can handle GET and POST requests.</description>
    * ```ts
    * // /app/shopify.server.ts
-   * import { ApiVersion, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { ApiVersion, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc

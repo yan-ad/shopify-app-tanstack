@@ -10,7 +10,7 @@ The project uses Vitest and includes extensive server-side test helpers.
 
 ## Library helper for downstream apps
 
-Consumers can use `testConfig()` from `@yanuaraditia/shopify-app-tanstack/test-helpers` to simplify local app test setup.
+Consumers can use `testConfig()` from `@yan-ad/shopify-app-tanstack/test-helpers` to simplify local app test setup.
 
 Typical usage:
 

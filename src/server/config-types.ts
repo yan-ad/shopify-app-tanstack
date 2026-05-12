@@ -60,7 +60,7 @@ export interface AppConfigArg<
    * <caption>Storing sessions with Prisma.</caption>
    * <description>Add the `@shopify/shopify-app-session-storage-prisma` package to use the Prisma session storage.</description>
    * ```ts
-   * import { shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    * import { PrismaSessionStorage } from "@shopify/shopify-app-session-storage-prisma";
    *
    * import prisma from "~/db.server";
@@ -122,7 +122,7 @@ export interface AppConfigArg<
    * <caption>Registering shop-specific webhooks.</caption>
    * ```ts
    * // app/shopify.server.ts
-   * import { DeliveryMethod, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { DeliveryMethod, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   webhooks: {
@@ -193,7 +193,7 @@ export interface AppConfigArg<
    * @example
    * <caption>Seeding your database custom data when a merchant installs your app.</caption>
    * ```ts
-   * import { DeliveryMethod, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { DeliveryMethod, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    * import { seedStoreData } from "~/db/seeds"
    *
    * const shopify = shopifyApp({
@@ -227,7 +227,7 @@ export interface AppConfigArg<
    * @example
    * <caption>Specifying an API Version</caption>
    * ```ts
-   * import { ApiVersion, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { ApiVersion, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc
@@ -248,7 +248,7 @@ export interface AppConfigArg<
    * <caption>Using a specific API Version</caption>
    * ```ts
    * // /app/shopify.server.ts
-   * import { shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    *
    * const shopify = shopifyApp({
    *   // ...etc
@@ -315,7 +315,7 @@ interface HooksConfig {
    * @example
    * <caption>Seeding data when a merchant installs your app.</caption>
    * ```ts
-   * import { DeliveryMethod, shopifyApp } from "@yanuaraditia/shopify-app-tanstack/server";
+   * import { DeliveryMethod, shopifyApp } from "@yan-ad/shopify-app-tanstack/server";
    * import { seedStoreData } from "~/db/seeds"
    *
    * const shopify = shopifyApp({

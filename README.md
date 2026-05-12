@@ -1,10 +1,10 @@
-# `@yanuaraditia/shopify-app-tanstack`
+# `@yan-ad/shopify-app-tanstack`
 
 <!-- ![Build Status]() -->
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
-[![npm version](https://img.shields.io/npm/v/%40yanuaraditia%2Fshopify-app-tanstack?label=npm)](https://www.npmjs.com/package/@yanuaraditia/shopify-app-tanstack)
-[![npm downloads](https://img.shields.io/npm/dm/%40yanuaraditia%2Fshopify-app-tanstack?label=downloads)](https://www.npmjs.com/package/@yanuaraditia/shopify-app-tanstack)
+[![npm version](https://img.shields.io/npm/v/%40yanuaraditia%2Fshopify-app-tanstack?label=npm)](https://www.npmjs.com/package/@yan-ad/shopify-app-tanstack)
+[![npm downloads](https://img.shields.io/npm/dm/%40yanuaraditia%2Fshopify-app-tanstack?label=downloads)](https://www.npmjs.com/package/@yan-ad/shopify-app-tanstack)
 
 This is a community-maintained project inspired by Shopify's app tooling, rebuilt for [TanStack Router](https://tanstack.com/router).
 
@@ -17,7 +17,7 @@ This package is built for the Vite ecosystem, making it easy to build Shopify ap
 This package publishes modern ESM output only (`.mjs`) and `"type": "module"` metadata.
 
 - Use `import` syntax in Node and bundlers.
-- `require('@yanuaraditia/shopify-app-tanstack')` is not supported.
+- `require('@yan-ad/shopify-app-tanstack')` is not supported.
 
 ## Migration guide
 
@@ -29,9 +29,9 @@ The full migration guide now lives in this repository Wiki: [Migration Guide](ht
 
 ## Package and release info
 
-- npm: https://www.npmjs.com/package/@yanuaraditia/shopify-app-tanstack
-- Install with bun: bun add @yanuaraditia/shopify-app-tanstack @tanstack/react-router
-- Install with npm: npm install @yanuaraditia/shopify-app-tanstack @tanstack/react-router
+- npm: https://www.npmjs.com/package/@yan-ad/shopify-app-tanstack
+- Install with bun: bun add @yan-ad/shopify-app-tanstack @tanstack/react-router
+- Install with npm: npm install @yan-ad/shopify-app-tanstack @tanstack/react-router
 
 This repository uses changelogen to generate and maintain `CHANGELOG.md` from Conventional Commits.
 
@@ -61,13 +61,13 @@ Shopify:
 
 ## Testing your app
 
-This package exports a helper method through `@yanuaraditia/shopify-app-tanstack/test-helpers` to simplify testing: `testConfig()`. This method can be used to pass dummy configuration properties to `shopifyApp()`.
+This package exports a helper method through `@yan-ad/shopify-app-tanstack/test-helpers` to simplify testing: `testConfig()`. This method can be used to pass dummy configuration properties to `shopifyApp()`.
 
 If your testing framework supports setting environment variables, we recommend using an environment variable, for example "SHOPIFY_TESTING" to replace your default config with the config returned from `testConfig()`.
 
 ```ts
 // my-app/app/shopify.server.ts
-import { testConfig } from "@yanuaraditia/shopify-app-tanstack/test-helpers";
+import { testConfig } from "@yan-ad/shopify-app-tanstack/test-helpers";
 ...
 const config = {
   ...
@@ -85,7 +85,7 @@ const shopify = shopifyApp(config);
 
 ```ts
 // my-app/app/shopify.server.ts
-import { testConfig } from "@yanuaraditia/shopify-app-tanstack/test-helpers";
+import { testConfig } from "@yan-ad/shopify-app-tanstack/test-helpers";
 ...
 const sessionStorage = new PrismaSessionStorage(prisma);
 const config = {
