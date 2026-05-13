@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 This changelog is managed with changelogen and is updated by running the changelog workflow.
 
+## v1.5.1
+
+[compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.5.0...v1.5.1)
+
+### 🩹 Fixes
+
+- Preserve server entry exports ([9729593](https://github.com/yanuaraditia/shopify-app-tanstack/commit/9729593))
+
+### 🏡 Chore
+
+- **release:** V1.5.0 ([ed76051](https://github.com/yanuaraditia/shopify-app-tanstack/commit/ed76051))
+
+### ❤️ Contributors
+
+- Yanuaraditia ([@ngalor](https://github.com/ngalor))
+- Yan-ad ([@ngalor](https://github.com/ngalor))
+
 ## v1.5.0
 
 [compare changes](https://github.com/yanuaraditia/shopify-app-tanstack/compare/v1.4.3...v1.5.0)
