@@ -58,6 +58,7 @@ export default defineConfig({
     rolldownOptions: {
       input,
       external: externalDeps,
+      preserveEntrySignatures: 'strict',
       output: {
         format: 'es' as const,
         entryFileNames: '[name].mjs',
