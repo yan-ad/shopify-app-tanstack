@@ -1,9 +1,4 @@
 import '@shopify/shopify-api/adapters/web-api';
-import {setAbstractRuntimeString} from '@shopify/shopify-api/runtime';
-
-setAbstractRuntimeString(() => {
-  return `React Router`;
-});
 
 export {
   LogSeverity,

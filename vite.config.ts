@@ -40,10 +40,17 @@ const input = {
   ...adapterEntries,
 };
 
-const externalDeps = [
+const externalPackageDeps = [
   ...Object.keys((pkg as PackageJsonDeps).dependencies ?? {}),
   ...Object.keys((pkg as PackageJsonDeps).peerDependencies ?? {}),
   ...Object.keys((pkg as PackageJsonDeps).optionalDependencies ?? {}),
+];
+
+const externalDeps = [
+  ...externalPackageDeps,
+  ...externalPackageDeps.map((dependencyName) =>
+    new RegExp(`^${dependencyName.replace(/\//g, '\\/')}\\/`),
+  ),
   ...builtinModules,
   ...builtinModules.map((moduleName) => `node:${moduleName}`),
 ];

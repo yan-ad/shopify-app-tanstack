@@ -16,6 +16,9 @@ Import the Nitro adapter once from your server entry before creating the Shopify
 ```ts
 // app/shopify.server.ts
 import '@yan-ad/shopify-app-tanstack/server/adapters/nitro';
+
+// Keep this import after the Nitro adapter. The adapter initializes Shopify's
+// runtime hooks before shopifyApp calls into @shopify/shopify-api.
 import {ApiVersion, shopifyApp} from '@yan-ad/shopify-app-tanstack/server';
 
 export const shopify = shopifyApp({
